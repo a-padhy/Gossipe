@@ -25,6 +25,10 @@ app.use("/api/user", userRoutes);
 app.use("/api/chat", chatRoutes);
 app.use("/api/message", messageRoutes);
 
+app.use("/", (req, res) => {
+  res.send("test ok");
+});
+
 app.use(notFound);
 app.use(errorHandler);
 
