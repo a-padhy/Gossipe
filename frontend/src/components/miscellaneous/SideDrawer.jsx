@@ -6,7 +6,6 @@ import { useDisclosure } from "@chakra-ui/hooks";
 import { Input } from "@chakra-ui/input";
 import { Box, Text } from "@chakra-ui/layout";
 import { Search2Icon } from "@chakra-ui/icons";
-import NotificationBadge, { Effect } from "react-notification-badge";
 import {
   Menu,
   MenuButton,
@@ -32,6 +31,7 @@ import ProfileModal from "./ProfileModal.jsx";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { getSender } from "../../config/ChatLogics.jsx";
+import NotificationBell from "./NotificationBell.jsx";
 
 const SideDrawer = () => {
   const [search, setSearch] = useState("");
@@ -148,11 +148,7 @@ const SideDrawer = () => {
         <div>
           <Menu>
             <MenuButton p={1}>
-              <NotificationBadge
-                count={notification.length}
-                effect={Effect.SCALE}
-              />
-              <BellIcon fontSize="2xl" m={1} />
+              <NotificationBell notificationCount={notification.length} />
             </MenuButton>
             <MenuList pl={2}>
               {!notification.length && "No New Messages"}
