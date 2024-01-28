@@ -20,7 +20,9 @@ import ScrollableChat from "./ScrollableChat";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const ENDPOINT = "http://localhost:5000";
+// const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://gossipe-rvjh.vercel.app";
+
 let socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {

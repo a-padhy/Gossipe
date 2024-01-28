@@ -4,7 +4,8 @@ import axios from "axios";
 import HomePage from "./pages/HomePage";
 import ChatPage from "./pages/ChatPage";
 
-axios.defaults.baseURL = "http://localhost:5000/";
+// axios.defaults.baseURL = "http://localhost:5000/";
+axios.defaults.baseURL = "https://gossipe-rvjh.vercel.app/";
 axios.defaults.withCredentials = true;
 
 const App = () => {
